@@ -1,14 +1,18 @@
 <ion-header>
   <ion-toolbar>
     <ion-title>
-      Ionic Blank
+      Conocimientos sobre capitales del mundo
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-  <div class="ion-padding">
-    The world is your oyster.
-    <p>If you get lost, the <a target="_blank" rel="noopener" href="https://ionicframework.com/docs/">docs</a> will be your guide.</p>
-  </div>
+  <ion-label>{{countries[currentIndex]}}</ion-label>
+
+<ion-select [(ngModel)]="currentSelection" placeholder="{{currentCity}}">
+  <ion-select-option *ngFor="let currentCity of cities[currentIndex]; index as i" value="{{currentCity}}">
+    {{currentCity}}
+  </ion-select-option>
+</ion-select>
+<ion-button size="small" (click)="nextQuestion(currentSelection)">Siguiente</ion-button>
 </ion-content>
