@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -16,14 +17,22 @@ export class HomePage {
     currentSelection: string = "";
     currentCity = this.cities[0][0];
 
-  constructor() {}
+  constructor(private router: Router) {}
 
   nextQuestion(optionSelected) {
     console.log(optionSelected + ' was selected!')
     this.selected.push(optionSelected);
-    this.currentIndex++;
     this.currentCity = this.cities[this.currentIndex][0];
     this.currentSelection = "";
+    this.currentIndex++;
+    if (this.currentIndex >= this.countries.length) {
+      this.showResults();
+    }
+  }
+
+  showResults() {
+    console.log('navigation to page of results:');
+    this.router.navigate(['/results']);
   }
 
 }
