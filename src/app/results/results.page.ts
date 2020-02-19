@@ -26,7 +26,8 @@ export class ResultsPage implements OnInit {
   }
 
   goBack() {
-    this.navController.pop();
+   // this.navController.pop();
+   this.router.navigate(['/home']);
   }
 
   ngOnInit() {

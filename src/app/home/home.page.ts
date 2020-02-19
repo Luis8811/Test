@@ -57,6 +57,17 @@ export class HomePage {
     }
   }
 
+ 
+  ionViewWillEnter() {
+    console.log('ionViewWillEnter'); 
+    console.log('ionViewWillEnter - Home---->');
+    console.log('Initializing variables:');
+    this.initTest();
+    console.log('countries: ' + this.countries.length);
+    console.log('cities: ' + this.cities.length);
+    console.log('currentIndex: ' + this.currentIndex);
+    console.log('selected: ' + this.selected);
+    console.log('current selection: ' + this.currentSelection);
+  }
   
-
 }
