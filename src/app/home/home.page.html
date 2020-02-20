@@ -14,5 +14,8 @@
     {{currentCity}}
   </ion-select-option>
 </ion-select>
-<ion-button size="small" (click)="nextQuestion(currentSelection)">Siguiente</ion-button>
+<ion-button size="default" (click)="nextQuestion(currentSelection)" fill="solid">
+  Siguiente
+ <ion-icon name="arrow-round-forward" slot="end"></ion-icon>
+</ion-button>
 </ion-content>
