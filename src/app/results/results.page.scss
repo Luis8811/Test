@@ -1,3 +1,9 @@
 ion-icon {
     color: rgb(157, 255, 0);
   }
+
+ion-button {
+  --color: rgb(255, 219, 140);
+  --border-color: rgb(180, 180, 60);
+  --color-hover: rgb(150, 150, 150); 
+}
